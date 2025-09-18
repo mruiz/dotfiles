@@ -99,6 +99,8 @@
         onActivation.upgrade = true;
       };
 
+      system.primaryUser = username;
+
       system.activationScripts.applications.text = let
         env = pkgs.buildEnv {
           name = "system-applications";
@@ -120,12 +122,12 @@
         '';
 
       # Auto upgrade nix package and the daemon service.
-      # services.nix-daemon.enable = true;
-      # nix.package = pkgs.nix;
+      nix.enable = true;
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
+      security.pam.services.sudo_local.touchIdAuth = true;
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
 
@@ -138,6 +140,8 @@
         NSGlobalDomain.AppleShowAllExtensions = true;
         loginwindow.GuestEnabled = false;
         finder.FXPreferredViewStyle = "clmv";
+        dock.autohide = true;
+        finder.AppleShowAllExtensions = true;
       };
 
       # The platform the configuration will be used on.
