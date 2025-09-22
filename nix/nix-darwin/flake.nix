@@ -37,10 +37,13 @@
           pkgs.act # Run your github Actions locally
           pkgs.bun # Fast nodejs
           pkgs.pnpm
+          pkgs.fzf
+          pkgs.bat
           pkgs.git
           pkgs.gh
           pkgs.gnupg
           pkgs.unstable.go_1_25
+          pkgs.unstable.zed-editor
           # pkgs.lua-language-server
           pkgs.mkalias
           pkgs.neovim
@@ -60,10 +63,13 @@
           pkgs.templ
           pkgs.tmux
           pkgs.zoxide
+          pkgs.starship
+          pkgs.unstable.aerospace
         ];
 
       fonts.packages = [
         pkgs.nerd-fonts.jetbrains-mono
+        pkgs.nerd-fonts.caskaydia-cove
       ];
 
       users.users.mathieu = {
@@ -77,6 +83,7 @@
         # onActivation.cleanup = "uninstall";
         brews = [
           "mas"
+          "borders"
         ];
         casks = [
           "hammerspoon"
@@ -88,8 +95,10 @@
           "android-platform-tools"
           "monitorcontrol"
           "autodesk-fusion"
+          "orcaslicer"
         ];
         taps = [
+          "FelixKratz/formulae"
         ];
         masApps = {
           # Yoink = 457622435;
