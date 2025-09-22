@@ -1,0 +1,41 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "icon_theme": "Catppuccin Mocha",
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Catppuccin Mocha"
+  },
+  "auto_install_extensions": {
+    "dart": true,
+    "catppuccin": true,
+    "catppuccin-icons": true,
+    "flutter-snippets": true,
+    "dockerfile": true,
+    "html": true,
+    "make": true
+  },
+  "lsp": {
+    "dart": {
+      "binary": {
+        "path": "fvm",
+        "arguments": ["dart", "language-server", "--protocol=lsp"]
+      }
+    }
+  },
+  "terminal": {
+    "font_family": "CaskaydiaCove Nerd Font",
+    "font_size": 18,
+    "dock": "right"
+  }
+}
