@@ -23,7 +23,11 @@
     "flutter-snippets": true,
     "dockerfile": true,
     "html": true,
-    "make": true
+    "make": true,
+    "toml": true,
+    "nextjs-react-snippets": true,
+    "markdown-oxide": true,
+    "markdownlint": true
   },
   "lsp": {
     "dart": {
