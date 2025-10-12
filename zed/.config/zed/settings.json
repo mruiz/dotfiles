@@ -16,6 +16,53 @@
     "light": "One Light",
     "dark": "Catppuccin Mocha"
   },
+  "agent": {
+    "inline_assistant_model": {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash"
+    }
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "tabs": {
+    "show_diagnostics": "errors",
+    "file_icons": true,
+    "git_status": true
+  },
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
+  },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false
+  },
+  "project_panel": {
+    "button": true,
+    "git_status": true,
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "button": false,
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left",
+    "button": false
+  },
+  "notification_panel": {
+    "dock": "right",
+    "button": false
+  },
+  "terminal": {
+    "font_family": "CaskaydiaCove Nerd Font",
+    "font_size": 18,
+    "dock": "right"
+  },
+  "max_tabs": 6,
+  "format_on_save": "on",
+  "autosave": "on_focus_change",
   "auto_install_extensions": {
     "dart": true,
     "catppuccin": true,
@@ -27,7 +74,55 @@
     "toml": true,
     "nextjs-react-snippets": true,
     "markdown-oxide": true,
-    "markdownlint": true
+    "markdownlint": true,
+    "lua": true,
+    "nix": true,
+    "mcp-server-context7": true,
+    "proto": true,
+    "mcp-server-github": true,
+    "mcp-server-firecrawl": true
+  },
+  "diagnostics": {
+    "button": true,
+    "include_warnings": true,
+    "lsp_pull_diagnostics": {
+      "enabled": true,
+      "debounce_ms": 50
+    },
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150,
+      "padding": 4,
+      "min_column": 0,
+      "max_severity": null
+    }
+  },
+  "languages": {
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true,
+        "source.removeUnunsedImports": true
+      },
+      "formatter": "prettier"
+    },
+    "JavaScript": {
+      "formatter": "prettier",
+      "language_servers": ["typescript-language-server", "eslint"],
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true,
+        "source.removeUnunsedImports": true
+      }
+    },
+    "TSX": {
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true,
+        "source.removeUnunsedImports": true
+      },
+      "formatter": "prettier"
+    }
   },
   "lsp": {
     "dart": {
@@ -36,10 +131,5 @@
         "arguments": ["dart", "language-server", "--protocol=lsp"]
       }
     }
-  },
-  "terminal": {
-    "font_family": "CaskaydiaCove Nerd Font",
-    "font_size": 18,
-    "dock": "right"
   }
 }
