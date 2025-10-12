@@ -16,6 +16,7 @@
     add-unstable-packages = final: _prev: {
       unstable = import inputs.nixpkgs-unstable {
         system = "aarch64-darwin";
+        config.allowUnfree = _prev.config.allowUnfree;
       };
     };
     username = "mathieu";
@@ -36,6 +37,7 @@
           pkgs.air # Live reload for go apps
           pkgs.act # Run your github Actions locally
           pkgs.bun # Fast nodejs
+          pkgs.nodejs_24
           pkgs.pnpm
           pkgs.fzf
           pkgs.bat
@@ -48,7 +50,6 @@
           pkgs.mkalias
           pkgs.neovim
           pkgs.nil
-          pkgs.obsidian
           #pkgs.opentofu
           pkgs.pass
           pkgs.rclone
@@ -65,11 +66,22 @@
           pkgs.zoxide
           pkgs.starship
           pkgs.unstable.aerospace
+          pkgs.unstable.opencode
+          pkgs.typescript
+          pkgs.unstable.ghostty-bin
+          pkgs.unstable.raycast
+          pkgs.unstable.sketchybar
+          pkgs.lua
+          pkgs.jq
+          pkgs.nixd
+          pkgs.unstable.typescript-language-server
+          pkgs.unstable.eslint
         ];
 
       fonts.packages = [
         pkgs.nerd-fonts.jetbrains-mono
         pkgs.nerd-fonts.caskaydia-cove
+        pkgs.unstable.sketchybar-app-font
       ];
 
       users.users.mathieu = {
@@ -91,11 +103,14 @@
           "notion"
           "discord"
           "the-unarchiver"
-          "ghostty"
           "android-platform-tools"
           "monitorcontrol"
           "autodesk-fusion"
           "orcaslicer"
+          "brave-browser"
+          "font-sf-pro"
+          "sf-symbols"
+          "font-hack-nerd-font"
         ];
         taps = [
           "FelixKratz/formulae"
@@ -143,6 +158,8 @@
       # Used for backwards compatibility, please read the changelog before changing.
       # $ darwin-rebuild changelog
       system.stateVersion = 6;
+
+      services.sketchybar.enable = true;
 
       system.defaults = {
         NSGlobalDomain.AppleICUForce24HourTime = true;
