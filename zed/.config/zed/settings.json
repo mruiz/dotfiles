@@ -20,6 +20,10 @@
     "inline_assistant_model": {
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash"
+    },
+    "commit_message_model": {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini"
     }
   },
   "features": {
