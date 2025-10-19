@@ -76,6 +76,7 @@
           pkgs.nixd
           pkgs.unstable.typescript-language-server
           pkgs.unstable.eslint
+          pkgs.unstable.obsidian
         ];
 
       fonts.packages = [
@@ -168,6 +169,7 @@
         finder.FXPreferredViewStyle = "clmv";
         dock.autohide = true;
         finder.AppleShowAllExtensions = true;
+        screencapture.location = "~/Pictures/screenshots";
       };
 
       # The platform the configuration will be used on.
