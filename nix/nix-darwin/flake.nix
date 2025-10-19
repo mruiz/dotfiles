@@ -36,9 +36,9 @@
         [
           pkgs.air # Live reload for go apps
           pkgs.act # Run your github Actions locally
-          pkgs.bun # Fast nodejs
+          pkgs.unstable.bun # Fast nodejs
           pkgs.nodejs_24
-          pkgs.pnpm
+          pkgs.unstable.pnpm
           pkgs.fzf
           pkgs.bat
           pkgs.git
